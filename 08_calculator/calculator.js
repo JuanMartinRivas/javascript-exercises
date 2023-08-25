@@ -11,17 +11,21 @@ const subtract = function (num1, num2) {
 };
 
 const sum = function (nums) {
-  let result;
+  let result = 0;
 
-  for (let i = 0; i < nums.length; i++ ) {
+  for (let i = 0; i < nums.length; i++) {
     result += nums[i];
   };
 
   return result
 };
 
-const multiply = function (num1, num2) {
-  let result = num1 * num2;
+const multiply = function (nums) {
+  let result = 1;
+
+  for (let i = 0; i < nums.length; i++) {
+    result = result * nums[i];
+  };
 
   return result
 };
@@ -33,12 +37,12 @@ const power = function (num1, num2) {
 };
 
 const factorial = function (num) {
-  let result;
+  let result = 1;
 
-  if (num === 0) {
+  if (num === 0 || num === 1) {
     result = 1
   } else {
-    for (let i = 2; i <= num; i++)
+    for (let i = num; i >= 1; i--)
       result = result * i;
   }
 
